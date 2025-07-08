@@ -1,0 +1,99 @@
+body {
+    background-color: #151B23 !important;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body p {
+    margin-top: 5rem;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 6rem;
+}
+.glow-text {
+    text-shadow: 0 0 5px rgb(255, 0, 0), 0 0 10px #ff0, 0 0 20px #f00;
+}
+
+/* เพิ่มแสงเรืองรอบข้อความ */
+
+.wrapper {
+    margin-top: 10rem;
+    /* background-color: aliceblue; */
+}
+
+.wrapper .input-box {
+    width: 350px;
+    height: 4rem;
+    text-align: center;
+    background-color: #202830;
+    border: none;
+    border-radius: 19px;
+
+    font-size: 1.2rem;
+    color: white;
+}
+
+.wrapper .input-box:focus {
+    box-shadow: none;
+    outline: #00C4CC solid 1px;
+    border: none;
+}
+
+.wrapper .input-box::placeholder {
+    font-size: 1.2rem;
+}
+
+.wrapper button {
+    margin-top: 1rem;
+
+    width: 350px;
+    height: 4rem;
+    text-align: center;
+    background-color: #202830;
+    border: none;
+    border-radius: 19px;
+
+    font-size: 1.2rem;
+    color: white;
+}
+
+.wrapper .link-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper .link-container a {
+    text-decoration: none;
+    color: #00C4CC;
+}
+.wrapper button:hover {
+    background-color:#00C4CC;
+    color:black;
+    
+}
+
+.neon-text {
+      --borderWidth: 4px;         /* ความหนาขอบ */
+      --angle: 0deg;              /* มุมเริ่มต้นของ gradient */
+      position: relative;
+      padding: 20px 40px;
+      font-size: 48px;
+      font-weight: bold;
+      color: #fff;
+      background: #000;
+      border: var(--borderWidth) solid transparent;
+      /* ใช้ conic-gradient เป็นแหล่งสีของ border */
+      border-image: conic-gradient(from var(--angle), 
+                    #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00) 
+                    1; 
+      /* หมุนตัวแปร --angle จาก 0 → 360deg */
+      animation: spin 3s linear infinite;
+    }
+
+    @keyframes spin {
+      to { --angle: 360deg; }
+    }
